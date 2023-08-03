@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <!-- Whats New Start -->
+    <section class="whats-news-area pt-50 pb-20">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="blog_details " style="padding-top: 8px; padding-bottom: 8px; background-color: #f7f7f7; margin-bottom: 15px;">
+                            <ul class="blog-info-link" style="overflow-x:auto;white-space:nowrap; ">
+                                <a style="color: black; font-size: large;" href="">Category</a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15"><g transform="rotate(180 7.5 7.5)"><path fill="none" stroke="currentColor" stroke-linecap="square" d="m8.5 4.5l-3 3l3 3"/></g></svg>
+                                <a style="color: black; font-size: large;" href="{% url 'category' %}">All</a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15"><g transform="rotate(180 7.5 7.5)"><path fill="none" stroke="currentColor" stroke-linecap="square" d="m8.5 4.5l-3 3l3 3"/></g></svg>
+                                <a style="color: black; font-size: large;" href="">{{c_name}}</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Nav Card -->
+                        <div class="tab-content">
+                            <!-- card one -->
+                            <div class="tab-pane fade show active">
+                                <div class="whats-news-caption">
+                                    <div class="row">
+                                        {% for article in articles %}
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="single-what-news mb-100">
+                                                <div class="what-img">
+                                                    <img src="{{ article.image.url }}" alt="" style="height: 335px;">
+                                                </div>
+                                                <div class="what-cap">
+                                                    <span class="color1">{{article.category.name}}</span>
+                                                    <h4><a href="{% url 'articles' article.id %}">{{article.title | slice:':50'}}... <a href="{% url 'articles' article.pk %}" style="color: rgb(247, 86, 86);">more</a></a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Whats New End -->
+
+
+    <!--Start pagination -->
+    <div class="pagination-area pb-45 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="single-wrap d-flex justify-content-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-start">
+                                <li class="page-item"><a class="page-link" href="#"><span
+                                            class="flaticon-arrow roted"></span></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><span
+                                            class="flaticon-arrow right-arrow"></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End pagination  -->
+
+    <!--   Weekly-News start -->
+    <div class="weekly-news-area pt-50">
+        <div class="container">
+            <div class="weekly-wrapper">
+                <!-- section Tittle -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-tittle mb-30">
+                            <h3>Weekly Top News</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="weekly-news-active dot-style d-flex dot-style">
+                            {% for weekly in weekly_top_news %}
+                            <div class="weekly-single active">
+                                <div class="weekly-img">
+                                    <img src="{{ weekly.image.url }}" alt="" style="width: 371px; height: 431px;">
+                                </div>
+                                <div class="weekly-caption"  style="width: 84%;">
+                                    <span class="color1">{{ weekly.category }}</span>
+                                    <h4><a href="#">{{weekly.title | slice:':50'}}... <a href="{% url 'articles' weekly.pk %}" style="color: rgb(247, 86, 86);">more</a></a></h4>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Weekly-News -->
+    
+</main>
+{% endblock %}

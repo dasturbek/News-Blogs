@@ -1,0 +1,320 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>News HTML-5 Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static './img/dasturbek.ico' %}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static './css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/ticker-style.css' %}">
+    <link rel="stylesheet" href="{% static './css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static './css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static './css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static './css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static './css/slick.css' %}">
+    <link rel="stylesheet" href="{% static './css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle" style="width: 80px; height: 80px;"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static './img/dasturbek.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header">
+                <div class="header-bottom header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center ">
+                            <div class="col-xl-12 col-lg-16 col-md-12 header-flex">
+                                <!-- sticky -->
+                                <div class="sticky-logo">
+                                    <a href="index.html"><img src="{% static './img/logo.png' %}" alt="" style="width: 180px;"></a>
+                                </div>
+                                <!-- Main-menu -->
+                                <div class="col-xl-12 main-menu d-none d-md-block justify-content-center">
+                                    <nav>
+                                        <ul id="navigation" >
+                                            <li><a href="{% url 'home' %}" style="font-size:medium;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M22 22H2m0-11l8.126-6.5a3 3 0 0 1 3.748 0L22 11m-6.5-5.5v-2A.5.5 0 0 1 16 3h2.5a.5.5 0 0 1 .5.5v5M4 22V9.5M20 22V9.5"/><path d="M15 22v-5c0-1.414 0-2.121-.44-2.56C14.122 14 13.415 14 12 14c-1.414 0-2.121 0-2.56.44C9 14.878 9 15.585 9 17v5m5-12.5a2 2 0 1 1-4 0a2 2 0 0 1 4 0Z"/></g></svg>
+                                                Home</a>                                        </li>
+                                            <li><a href="{% url 'category' %}" style="font-size:medium;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none"><rect width="36" height="14" x="6" y="28" stroke="#000" stroke-width="4" rx="4"/><path stroke="#000" stroke-linecap="round" stroke-width="4" d="M20 7H10C7.79086 7 6 8.79086 6 11V17C6 19.2091 7.79086 21 10 21H20"/><circle cx="34" cy="14" r="8" fill="#2F88FF" stroke="#000" stroke-width="4"/><circle cx="34" cy="14" r="3" fill="#fff"/></g></svg>
+                                                Category</a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'category' %}" style="font-size: medium;">All </a></li>
+                                                    <li><a href="{% url 'categories' 'Uzbekiston' %}" style="font-size: medium;">O'zbekiston </a></li>
+                                                    <li><a href="{% url 'categories' 'Jahon' %}" style="font-size: medium;">Jahon</a></li>
+                                                    <li><a href="{% url 'categories' 'Iqtisodiyot' %}" style="font-size: medium;">Iqtisodiyot </a></li>
+                                                    <li><a href="{% url 'categories' 'Jamiyat' %}" style="font-size: medium;">Jamiyat </a></li>
+                                                    <li><a href="{% url 'categories' 'Nuqtayi nazar' %}" style="font-size: medium;">Nuqtayi nazar</a></li>
+                                                    <li><a href="{% url 'categories' 'Fashion' %}" style="font-size: medium;">Fashion </a></li>
+                                                    <li><a href="{% url 'categories' 'Sports' %}" style="font-size: medium;">Sports </a></li>
+                                                    <li><a href="{% url 'categories' 'Lifestyle' %}" style="font-size: medium;">Lifestyle </a></li>
+                                                    <li><a href="{% url 'categories' 'Technology' %}" style="font-size: medium;">Technology </a></li>
+                                                    <li><a href="{% url 'categories' 'Other' %}" style="font-size: medium;">Other </a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'blog' %}" style="font-size:medium;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="M14.52 4.01a.507.507 0 0 0-.52.51V6.5c0 .28.22.5.5.5v.02c6.23.24 11.24 5.25 11.48 11.48H26c0 .28.22.5.5.5h1.98c.29 0 .52-.24.51-.52c-.27-7.86-6.61-14.2-14.47-14.47zm0 5a.514.514 0 0 0-.52.51v1.98c0 .28.22.5.5.5v.03c3.47.23 6.24 3 6.47 6.47H21c0 .28.22.5.5.5h1.98c.28 0 .52-.24.51-.52c-.27-5.1-4.37-9.2-9.47-9.47zM5.5 10c-.28 0-.5.22-.5.5v11c0 3.58 2.92 6.5 6.5 6.5s6.5-2.92 6.5-6.5s-2.92-6.5-6.5-6.5c-.28 0-.5.22-.5.5v3c0 .28.22.5.5.5a2.5 2.5 0 0 1 0 5A2.5 2.5 0 0 1 9 21.5v-11c0-.28-.22-.5-.5-.5h-3z"/></svg>
+                                                Blogs</a></li>
+                                            <li><a href="{% url 'about' %}" style="font-size:medium;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><g fill="none"><path stroke="currentColor" stroke-linejoin="round" stroke-width="4" d="M24 44a19.937 19.937 0 0 0 14.142-5.858A19.937 19.937 0 0 0 44 24a19.938 19.938 0 0 0-5.858-14.142A19.937 19.937 0 0 0 24 4A19.938 19.938 0 0 0 9.858 9.858A19.938 19.938 0 0 0 4 24a19.937 19.937 0 0 0 5.858 14.142A19.938 19.938 0 0 0 24 44Z"/><path fill="currentColor" fill-rule="evenodd" d="M24 11a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5Z" clip-rule="evenodd"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M24.5 34V20h-2M21 34h7"/></g></svg>
+                                                About</a></li>
+                                            <li><a href="{% url 'contact' %}" style="font-size:medium;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M1 2h21v16h-8l-8 4v-4H1V2Zm5 8h1v1H6v-1Zm5 0h1v1h-1v-1Zm5 0h1v1h-1v-1Z"/></svg>
+                                                Contact</a></li>
+                                            <li><a href="" style="font-size:medium;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 13.5l3.14-7.33a.39.39 0 0 1 .72 0l3.14 7.33m-5.59-3.29h4.18M.5 4A3.5 3.5 0 0 1 4 .5"/><path d="M.5 4A3.5 3.5 0 0 1 4 .5M3 4a1 1 0 0 1 1-1"/><path d="M3 4a1 1 0 0 1 1-1m6-2.5A3.5 3.5 0 0 1 13.5 4"/><path d="M10 .5A3.5 3.5 0 0 1 13.5 4M10 3a1 1 0 0 1 1 1"/><path d="M10 3a1 1 0 0 1 1 1"/></g></svg>
+                                                O'zbekcha</a>
+                                                <ul class="submenu">
+                                                    <li><a href="" style="font-size: medium;">O'zbekcha</a></li>
+                                                    <li><a href="{% url 'create_post' %}" style="font-size: medium;">English</a></li>
+                                                    <li><a href="{% url 'create_article' %}" style="font-size: medium;">Rus</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <form action="{% url 'search_results' %}" method="post">
+                                                    {% csrf_token %}
+                                                    <div class="form-group">
+                                                        <div class="input-group mb-lg-0 search_widget">
+                                                            <input type="text" class="form-control" placeholder='Input key...'
+                                                                onfocus="this.placeholder = ''"
+                                                                onblur="this.placeholder = 'Search...'"
+                                                                style="font-size: medium;"
+                                                                name="searcher">
+                                                            <div class="input-group-append">
+                                                                <input class="btns" type="submit" value="Search">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </li>
+                                            {% if user.is_authenticated %}                                            
+                                            <li>
+                                                <a href="{% url 'account' user.username %}" style="font-size: large;">
+                                                    {% if user.image %}
+                                                    <img src="{{ user.image.url }}" 
+                                                    alt="" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid black;">
+                                                    {% else %}
+                                                    <img src="{% static './accounts/images/user.gif' %}" 
+                                                    alt="" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid black;">
+                                                    {% endif %}
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'account' user.username %}" style="font-size: medium;">Profile</a></li>
+                                                    <li><a href="{% url 'create_post' %}" style="font-size: medium;">Create Post</a></li>
+                                                    {% if user.role == 'A' %}
+                                                    <li><a href="{% url 'create_article' %}" style="font-size: medium;">Create Article</a></li>
+                                                    {% endif %}
+                                                    <li><a href="{% url 'logout' %}" style="font-size: medium;">Log Out</a></li>
+                                                </ul>
+                                            </li>
+                                            {% else %}
+                                            <li>
+                                                <a href="{% url 'sign_in' %}" style="font-size: large;">
+                                                    <img src="{% static './accounts/images/login.png' %}" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'sign_in' %}" style="font-size: medium;">Sign In </a></li>
+                                                    <li><a href="{% url 'sign_up' %}" style="font-size: medium;">Sign Up </a></li>
+                                                </ul>
+                                            </li>
+                                            {% endif %}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-md-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding fix">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-3 col-md-5 col-sm-8" style="position:static;">
+                        <div class="blog_right_sidebar">
+                            <div class="single_sidebar_widget popular_post_widget"style="background-color: #100f0f;">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="{% static './img/logorm.png' %}"
+                                            alt="" style="width: 180px;"></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Bandasi dunyoga kelibdiki, har kuni sinovda boʻladi</p>
+                                        <p class="info2">198 West 21th Street, Yangi obod 231 Samarqand Narbay,SN 00224</p>
+                                        <p class="info2">Phone: +998 (91) 123 45 89 <br>Cell: +998 (71) 123 02 24</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-lg-3 col-md-5 col-sm-8" style="position:static;">
+                        <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget popular_post_widget" style="background-color: #100f0f;">
+                                <h4 class="widget-tittle" style="color: white;
+                                    display: block;
+                                    padding-bottom: 10px;
+                                    margin-bottom: 25px;
+                                    border-bottom: 1px solid #f0e9ff;
+                                ">Recent News</h4>
+                                
+                                {% for three in three_article %}
+                                <div class="media post_item">
+                                    <img src="{{three.image.url}}" alt="post" style="width: 80px; height: 80px;">
+                                    <div class="media-body">
+                                        <a href="{% url 'articles' three.id %}">
+                                            <h3 style="color: white;">{{three.title | slice:':50'}}... <a href="{% url 'articles' three.pk %}" style="color: rgb(247, 86, 86);">more</a></h3>
+                                        </a>
+                                        <p style="color: rgb(150, 150, 150);">{{three.date_posted}}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </aside>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-lg-3 col-md-5 col-sm-8" style="position:static;">
+                        <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget instagram_feeds" style="background-color: #100f0f;">
+                                <h4 class="widget_title" style="color: white;">Follow Us</h4>
+                                <ul class="instagram_row flex-wrap ">
+                                   <li>
+                                      <a href="#">
+                                         <img class="img-fluid" src="{% static '/img/news/icon-fb.png' %}" alt="">
+                                      </a>
+                                   </li>
+                                   <li>
+                                      <a href="#">
+                                         <img class="img-fluid" src="{% static '/img/news/icon-ins.png' %}" alt="">
+                                      </a>
+                                   </li>
+                                   <li>
+                                      <a href="#">
+                                         <img class="img-fluid" src="{% static '/img/news/icon-tw.png' %}" alt="">
+                                      </a>
+                                   </li>
+                                   <li>
+                                      <a href="#">
+                                         <img class="img-fluid" src="{% static '/img/news/icon-yo.png' %}" alt="">
+                                      </a>
+                                   </li>
+                                   <li>
+                                      <a href="#">
+                                         <img class="img-fluid" src="{% static '/img/news/icon-fb.png' %}" alt="">
+                                      </a>
+                                   </li>
+                                   <li>
+                                      <a href="#">
+                                         <img class="img-fluid" src="{% static '/img/news/icon-yo.png' %}" alt="">
+                                      </a>
+                                   </li>
+                                </ul>
+                             </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom aera -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-lg-6">
+                            <div class="footer-copy-right">
+                                <p>
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    <a href="https://dasturbek.com" target="_blank">Dasturbek</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="footer-menu f-right">
+                                <ul>
+                                    <li><a href="#">Terms of use</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+
+    <!-- JS here -->
+
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src="{% static './js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{% static './js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static './js/popper.min.js' %}"></script>
+    <script src="{% static './js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{% static './js/jquery.slicknav.min.js' %}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{% static './js/owl.carousel.min.js' %}"></script>
+    <script src="{% static './js/slick.min.js' %}"></script>
+    <!-- Date Picker -->
+    <script src="{% static './js/gijgo.min.js' %}"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{% static './js/wow.min.js' %}"></script>
+    <script src="{% static './js/animated.headline.js' %}"></script>
+    <script src="{% static './js/jquery.magnific-popup.js' %}"></script>
+
+    <!-- Breaking New Pluging -->
+    <script src="{% static './js/jquery.ticker.js' %}"></script>
+    <script src="{% static './js/site.js' %}"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="{% static './js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static './js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static './js/jquery.sticky.js' %}"></script>
+
+    <!-- contact js -->
+    <script src="{% static './js/contact.js' %}"></script>
+    <script src="{% static './js/jquery.form.js' %}"></script>
+    <script src="{% static './js/jquery.validate.min.js' %}"></script>
+    <script src="{% static './js/mail-script.js' %}"></script>
+    <script src="{% static './js/jquery.ajaxchimp.min.js' %}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="{% static './js/plugins.js' %}"></script>
+    <script src="{% static './js/main.js' %}"></script>
+
+</body>
+
+</html>
