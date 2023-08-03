@@ -7,7 +7,13 @@
     <br>
   </h1>
 <!--     <a href="https://www.youtube.com/watch?v=axRjM_d8mz4"> -->
-      <img src="https://github.com/dasturbek/video_audio_player_and_converter_/blob/master/img.png" width=60% align="center"><br>
+      <img src="https://github.com/dasturbek/News-Blogs/blob/master/static/screenshots/1.png">
+      <img src="https://github.com/dasturbek/News-Blogs/blob/master/static/screenshots/2.png">
+      <img src="https://github.com/dasturbek/News-Blogs/blob/master/static/screenshots/3.png">
+      <img src="https://github.com/dasturbek/News-Blogs/blob/master/static/screenshots/4.png">
+      <img src="https://github.com/dasturbek/News-Blogs/blob/master/static/screenshots/5.png">
+      <img src="https://github.com/dasturbek/News-Blogs/blob/master/static/screenshots/6.png">
+      <br>
       Click here and watching News-Blogs
     </a>
     
